@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/media/jaider/DiscoArchivos/UNAL/Computacion Paralela/Practicas/Practica1'
+make: Leaving directory '/media/jaider/DiscoArchivos/UNAL/Computacion Paralela/Practicas/Practica1'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+
