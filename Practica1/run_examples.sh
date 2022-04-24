@@ -1,22 +1,26 @@
 #!/bin/bash
-if [ -z "$1" ]
+if [[ -z $1 && -z $2 ]]
 then
-    echo "Usage: ./run.sh <threads_number>"
+    echo "Usage: ./run.sh <threads_number>  <path_to_output>"
 	exit 1
 fi
 
+echo "Running with $1 threads" > $2
+
 for i in {1..12}
 do
-	echo ./image-filter perrito720.jpg "'720 filtrado/perrito720F$i.jpg'" $i $1
-   	time ./image-filter perrito720.jpg "720 filtrado/perrito720F$i.jpg" $i $1
+	echo -e "\n\n"./image-filter perrito720.jpg "'720 filtrado/perrito720F$i.jpg'" $i $1 >> $2
+   	{ time ./image-filter perrito720.jpg "720 filtrado/perrito720F$i.jpg" $i $1; } 2>> $2
 done
+
 for i in {1..12}
 do
-	echo ./image-filter perrito1080.jpg "'1080 filtrado/perrito1080F$i.jpg'" $i $1
-   	time ./image-filter perrito1080.jpg "1080 filtrado/perrito1080F$i.jpg" $i $1
+	echo -e  "\n\n"./image-filter perrito1080.jpg "'1080 filtrado/perrito1080F$i.jpg'" $i $1 >> $2
+   	{ time ./image-filter perrito1080.jpg "1080 filtrado/perrito1080F$i.jpg" $i $1; } 2>> $2
 done
+
 for i in {1..12}
 do
-	echo ./image-filter perrito4K.jpg "'4k filtrado/perrito4KF$i.jpg'" $i $1
-   	time ./image-filter perrito4K.jpg "4k filtrado/perrito4KF$i.jpg" $i $1
+	echo -e  "\n\n"./image-filter perrito4K.jpg "'4k filtrado/perrito4KF$i.jpg'" $i $1 >> $2
+   	{ time ./image-filter perrito4K.jpg "4k filtrado/perrito4KF$i.jpg" $i $1; } 2>> $2
 done

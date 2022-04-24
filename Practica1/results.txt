@@ -1,0 +1,253 @@
+Running with 16 threads
+
+
+./image-filter perrito720.jpg '720 filtrado/perrito720F1.jpg' 1 16
+
+real	0m0,398s
+user	0m0,968s
+sys	0m0,124s
+
+
+./image-filter perrito720.jpg '720 filtrado/perrito720F2.jpg' 2 16
+
+real	0m0,366s
+user	0m0,912s
+sys	0m0,147s
+
+
+./image-filter perrito720.jpg '720 filtrado/perrito720F3.jpg' 3 16
+
+real	0m0,364s
+user	0m0,944s
+sys	0m0,099s
+
+
+./image-filter perrito720.jpg '720 filtrado/perrito720F4.jpg' 4 16
+
+real	0m0,365s
+user	0m0,924s
+sys	0m0,114s
+
+
+./image-filter perrito720.jpg '720 filtrado/perrito720F5.jpg' 5 16
+
+real	0m0,385s
+user	0m0,896s
+sys	0m0,117s
+
+
+./image-filter perrito720.jpg '720 filtrado/perrito720F6.jpg' 6 16
+
+real	0m0,425s
+user	0m0,890s
+sys	0m0,127s
+
+
+./image-filter perrito720.jpg '720 filtrado/perrito720F7.jpg' 7 16
+
+real	0m0,504s
+user	0m0,921s
+sys	0m0,083s
+
+
+./image-filter perrito720.jpg '720 filtrado/perrito720F8.jpg' 8 16
+
+real	0m0,476s
+user	0m0,928s
+sys	0m0,094s
+
+
+./image-filter perrito720.jpg '720 filtrado/perrito720F9.jpg' 9 16
+
+real	0m0,392s
+user	0m0,940s
+sys	0m0,093s
+
+
+./image-filter perrito720.jpg '720 filtrado/perrito720F10.jpg' 10 16
+
+real	0m0,505s
+user	0m0,944s
+sys	0m0,112s
+
+
+./image-filter perrito720.jpg '720 filtrado/perrito720F11.jpg' 11 16
+
+real	0m0,433s
+user	0m0,934s
+sys	0m0,061s
+
+
+./image-filter perrito720.jpg '720 filtrado/perrito720F12.jpg' 12 16
+
+real	0m0,383s
+user	0m0,987s
+sys	0m0,097s
+
+
+./image-filter perrito1080.jpg '1080 filtrado/perrito1080F1.jpg' 1 16
+
+real	0m0,970s
+user	0m2,962s
+sys	0m0,180s
+
+
+./image-filter perrito1080.jpg '1080 filtrado/perrito1080F2.jpg' 2 16
+
+real	0m0,969s
+user	0m2,867s
+sys	0m0,137s
+
+
+./image-filter perrito1080.jpg '1080 filtrado/perrito1080F3.jpg' 3 16
+
+real	0m0,988s
+user	0m2,939s
+sys	0m0,135s
+
+
+./image-filter perrito1080.jpg '1080 filtrado/perrito1080F4.jpg' 4 16
+
+real	0m0,980s
+user	0m2,873s
+sys	0m0,149s
+
+
+./image-filter perrito1080.jpg '1080 filtrado/perrito1080F5.jpg' 5 16
+
+real	0m0,917s
+user	0m2,955s
+sys	0m0,116s
+
+
+./image-filter perrito1080.jpg '1080 filtrado/perrito1080F6.jpg' 6 16
+
+real	0m0,948s
+user	0m2,921s
+sys	0m0,154s
+
+
+./image-filter perrito1080.jpg '1080 filtrado/perrito1080F7.jpg' 7 16
+
+real	0m0,941s
+user	0m2,868s
+sys	0m0,132s
+
+
+./image-filter perrito1080.jpg '1080 filtrado/perrito1080F8.jpg' 8 16
+
+real	0m0,923s
+user	0m2,933s
+sys	0m0,130s
+
+
+./image-filter perrito1080.jpg '1080 filtrado/perrito1080F9.jpg' 9 16
+
+real	0m0,924s
+user	0m2,930s
+sys	0m0,159s
+
+
+./image-filter perrito1080.jpg '1080 filtrado/perrito1080F10.jpg' 10 16
+
+real	0m0,901s
+user	0m2,935s
+sys	0m0,156s
+
+
+./image-filter perrito1080.jpg '1080 filtrado/perrito1080F11.jpg' 11 16
+
+real	0m0,929s
+user	0m2,917s
+sys	0m0,161s
+
+
+./image-filter perrito1080.jpg '1080 filtrado/perrito1080F12.jpg' 12 16
+
+real	0m0,929s
+user	0m2,957s
+sys	0m0,136s
+
+
+./image-filter perrito4K.jpg '4k filtrado/perrito4KF1.jpg' 1 16
+
+real	0m5,521s
+user	0m17,300s
+sys	0m0,225s
+
+
+./image-filter perrito4K.jpg '4k filtrado/perrito4KF2.jpg' 2 16
+
+real	0m5,244s
+user	0m17,464s
+sys	0m0,224s
+
+
+./image-filter perrito4K.jpg '4k filtrado/perrito4KF3.jpg' 3 16
+
+real	0m5,006s
+user	0m17,497s
+sys	0m0,243s
+
+
+./image-filter perrito4K.jpg '4k filtrado/perrito4KF4.jpg' 4 16
+
+real	0m5,450s
+user	0m17,231s
+sys	0m0,194s
+
+
+./image-filter perrito4K.jpg '4k filtrado/perrito4KF5.jpg' 5 16
+
+real	0m5,132s
+user	0m17,521s
+sys	0m0,187s
+
+
+./image-filter perrito4K.jpg '4k filtrado/perrito4KF6.jpg' 6 16
+
+real	0m5,035s
+user	0m17,386s
+sys	0m0,219s
+
+
+./image-filter perrito4K.jpg '4k filtrado/perrito4KF7.jpg' 7 16
+
+real	0m5,712s
+user	0m17,110s
+sys	0m0,267s
+
+
+./image-filter perrito4K.jpg '4k filtrado/perrito4KF8.jpg' 8 16
+
+real	0m5,897s
+user	0m17,240s
+sys	0m0,281s
+
+
+./image-filter perrito4K.jpg '4k filtrado/perrito4KF9.jpg' 9 16
+
+real	0m5,834s
+user	0m17,272s
+sys	0m0,194s
+
+
+./image-filter perrito4K.jpg '4k filtrado/perrito4KF10.jpg' 10 16
+
+real	0m5,326s
+user	0m17,278s
+sys	0m0,222s
+
+
+./image-filter perrito4K.jpg '4k filtrado/perrito4KF11.jpg' 11 16
+
+real	0m5,221s
+user	0m17,359s
+sys	0m0,259s
+
+
+./image-filter perrito4K.jpg '4k filtrado/perrito4KF12.jpg' 12 16
+
+real	0m5,041s
+user	0m17,486s
+sys	0m0,233s
