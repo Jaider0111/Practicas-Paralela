@@ -20,7 +20,6 @@ Para usar la aplicacion se debe hacer desde linea de comando usando el siguiente
 
 ```
 ./image-filter <path_imagen_entrada> <path_imagen_salida> <numero_filtro> <numero_hilos>
-
 ```
 
 De lo anterior se debe tener en cuenta que el numero de hilos debe ser un numero entero mayor que 0, ademas,
@@ -31,7 +30,6 @@ Ademas si se desea compilar\* el codigo funte se debe hacer desde la linea de co
 
 ```
 g++ image-filter.cpp -o image-filter -lpthread `pkg-config --cflags --libs opencv4`
-
 ```
 
 \*Nota: Para compilar el codigo fuente es necesario tene instalado el paquete `pkg-config` ademas de las librerias de opencv.
@@ -41,7 +39,6 @@ ejecutar el script se debe hacer desde la linea de comando usando el siguiente c
 
 ```
 ./run_examples.sh <numero_hilos>
-
 ```
 
 \*Nota: Es importante que para ejecutar cualquiera de los comandos disponibles en este documento se debe estar
