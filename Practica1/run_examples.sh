@@ -1,7 +1,12 @@
 #!/bin/bash
-if [[ -z $1 && -z $2 ]]
+if [ -z "$1" ]
 then
     echo "Usage: ./run.sh <threads_number>  <path_to_output>"
+	exit 1
+fi
+if [ -z "$2" ]
+then
+	echo "Usage: ./run.sh <threads_number>  <path_to_output>"
 	exit 1
 fi
 
