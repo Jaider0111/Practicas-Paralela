@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Apr 19 14:41:14 2022
+# Make data base, printed on Sat Apr 23 22:14:35 2022
 
 # Variables
 
@@ -30,6 +30,8 @@ XDG_SESSION_TYPE = x11
 VSCODE_LOG_NATIVE = false
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
+# environment
+IM_CONFIG_PHASE = 1
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
 # environment
@@ -45,7 +47,7 @@ SHELL = /bin/sh
 # environment
 VSCODE_NLS_CONFIG = {"locale":"es","availableLanguages":{"*":"es"},"_languagePackId":"81204e1a79a1a53aa2a74c293087d05a.es","_translationsConfigFile":"/home/jaider/.config/Code/clp/81204e1a79a1a53aa2a74c293087d05a.es/tcf.json","_cacheRoot":"/home/jaider/.config/Code/clp/81204e1a79a1a53aa2a74c293087d05a.es","_resolvedLanguagePackCoreLocation":"/home/jaider/.config/Code/clp/81204e1a79a1a53aa2a74c293087d05a.es/dfd34e8260c270da74b5c2d86d61aee4b6d56977","_corruptedFile":"/home/jaider/.config/Code/clp/81204e1a79a1a53aa2a74c293087d05a.es/corrupted.info","_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:54538
+JOURNAL_STREAM = 8:51580
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # makefile
@@ -53,7 +55,7 @@ MAKEFILE_LIST :=
 # automatic
 @F = $(notdir $@)
 # environment
-IM_CONFIG_PHASE = 1
+GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/com.alacritty.Alacritty.desktop
 # environment
 DEBUG = WARN
 # environment
@@ -69,13 +71,13 @@ VSCODE_VERBOSE_LOGGING = true
 # environment
 _ = /usr/bin/code
 # environment
-MANAGERPID = 1959
+MANAGERPID = 2004
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
-VSCODE_CWD = /home/jaider
+VSCODE_CWD = /media/jaider/DiscoArchivos/UNAL/Computacion Paralela/Practicas/Practica1
 # environment
-ALACRITTY_SOCKET = /run/user/1000/Alacritty-:0-4459.sock
+ALACRITTY_SOCKET = /run/user/1000/Alacritty-:0-36977.sock
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
@@ -83,13 +85,13 @@ PATH = /opt/anaconda3/condabin:/home/jaider/.cargo/bin:/home/jaider/.local/bin:/
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/smartsoft:@/tmp/.ICE-unix/2192,unix/smartsoft:/tmp/.ICE-unix/2192
+SESSION_MANAGER = local/smartsoft:@/tmp/.ICE-unix/2228,unix/smartsoft:/tmp/.ICE-unix/2228
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
-WINDOWID = 56623108
+WINDOWID = 75497476
 # environment
-ALACRITTY_LOG = /tmp/Alacritty-4459.log
+ALACRITTY_LOG = /tmp/Alacritty-36977.log
 # environment
 XDG_MENU_PREFIX = gnome-
 # environment
@@ -97,7 +99,7 @@ VSCODE_LOG_STACK = false
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = f94b06bb0f4b4d269b79ce40f3a68f6a
+INVOCATION_ID = f99a96fca4444e1bb8990c8d1da788b2
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -107,7 +109,7 @@ XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 4459
+GIO_LAUNCHED_DESKTOP_FILE_PID = 36977
 # automatic
 %F = $(notdir $%)
 # environment
@@ -121,7 +123,7 @@ PWD = /media/jaider/DiscoArchivos/UNAL/Computacion Paralela/Practicas/Practica1
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 2152
+SSH_AGENT_PID = 2189
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -163,7 +165,7 @@ SHLVL = 1
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-fd076daf-c80e-46a5-976a-b108da7e2939.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-2336e259-db46-4932-a8a9-53027f7bfabe.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
@@ -178,6 +180,8 @@ XDG_CURRENT_DESKTOP = Unity
 CONDA_SHLVL = 0
 # default
 MAKE_COMMAND := make
+# environment
+OLDPWD = /home/jaider
 # default
 .VARIABLES := 
 # automatic
@@ -210,6 +214,8 @@ MAKEFILES :=
 LC_ALL = C
 # environment
 CONDA_PYTHON_EXE = /opt/anaconda3/bin/python
+# environment
+GJS_DEBUG_TOPICS = JS ERROR;JS LOG
 # automatic
 ^F = $(notdir $^)
 # default
@@ -222,6 +228,8 @@ CHROME_DESKTOP = code-url-handler.desktop
 WINDOWPATH = 2
 # default
 .INCLUDE_DIRS = /usr/include /usr/include
+# environment
+GJS_DEBUG_OUTPUT = stderr
 # default
 .RECIPEPREFIX := 
 # environment
@@ -229,11 +237,11 @@ LANG = C
 # environment
 TERM = alacritty
 # environment
-VSCODE_PID = 4825
+VSCODE_PID = 37233
 # environment
 _CE_CONDA = 
 # variable set hash-table stats:
-# Load=110/1024=11%, Rehash=0, Collisions=14/130=11%
+# Load=114/1024=11%, Rehash=0, Collisions=16/134=12%
 
 # Pattern-specific Variable Values
 
@@ -241,9 +249,9 @@ _CE_CONDA =
 
 # Directories
 
-# . (device 2053, inode 218522): 10 files, no impossibilities.
+# . (device 2053, inode 218522): 15 files, no impossibilities.
 
-# 10 files, no impossibilities in 1 directories.
+# 15 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -271,6 +279,7 @@ makefile:
 #  File does not exist.
 #  File has been updated.
 #  Failed to be updated.
+ 
 
 # Not a target:
 .DEFAULT:
@@ -293,13 +302,12 @@ GNUmakefile:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 17 / storage = 160 B / avg = 9 B
-# current buf: size = 8162 B / used = 160 B / count = 17 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 22 / storage = 225 B / avg = 10 B
+# current buf: size = 8162 B / used = 225 B / count = 22 / avg = 10 B
 
-# strcache performance: lookups = 20 / hit rate = 15%
+# strcache performance: lookups = 25 / hit rate = 12%
 # hash-table stats:
- 
-# Load=17/8192=0%, Rehash=0, Collisions=1/20=5%
-# Finished Make data base on Tue Apr 19 14:41:14 2022
+# Load=22/8192=0%, Rehash=0, Collisions=1/25=4%
+# Finished Make data base on Sat Apr 23 22:14:35 2022
 
  
