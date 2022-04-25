@@ -34,11 +34,10 @@ g++ image-filter.cpp -o image-filter -lpthread `pkg-config --cflags --libs openc
 
 \*Nota: Para compilar el codigo fuente es necesario tene instalado el paquete `pkg-config` ademas de las librerias de opencv.
 
-Si se desea ejecutar los ejemplos se tiene disponible el archivo `run_examples.sh` que contiene los comandos necesarios para ejecutar los ejemplos, este script recibe como parametro el numero de hilos a utilizar y para
-ejecutar el script se debe hacer desde la linea de comando usando el siguiente comando:
+Si se desea ejecutar los ejemplos se tiene disponible el archivo `run_examples.sh` que contiene los comandos necesarios para ejecutar los ejemplos, este script recibe como parametro el numero de hilos a utilizar y el archivo donde se almacenan los tiempos de ejecucion. Para ejecutar el script se debe hacer desde la linea de comando usando el siguiente comando:
 
 ```
-./run_examples.sh <numero_hilos>
+./run_examples.sh <numero_hilos> <archivo_salida>
 ```
 
 \*Nota: Es importante que para ejecutar cualquiera de los comandos disponibles en este documento se debe estar
