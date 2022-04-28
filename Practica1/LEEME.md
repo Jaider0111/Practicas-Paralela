@@ -34,6 +34,12 @@ De lo anterior se debe tener en cuenta que el numero de hilos debe ser un numero
 el numero de filtro debe ser un numero entero entre 1 y 12 correspondiente a un filtro de convolución de la
 lista de filtros disponibles.
 
+Si se desea ejecutar para 1, 2, 4, 8 y 16 hiloscon las imagenes ejemplo y el filtro 1 se disponible el archivo `run_all.sh`, este script recibe como parametro el archivo donde se almacenan los tiempos de ejecucion. Para ejecutar el script se debe hacer desde la linea de comando usando el siguiente comando:
+
+```
+./run_all.sh <archivo_salida>
+```
+
 Si se desea ejecutar los ejemplos se tiene disponible el archivo `run_examples.sh` que contiene los comandos necesarios para ejecutar los ejemplos, este script recibe como parametro el numero de hilos a utilizar y el archivo donde se almacenan los tiempos de ejecucion. Para ejecutar el script se debe hacer desde la linea de comando usando el siguiente comando:
 
 ```
