@@ -16,7 +16,15 @@ Los filtros disponibles son:
 - Laplance - 11
 - Gradiente - 12
 
-Para usar la aplicacion se debe hacer desde linea de comando usando el siguiente formato:
+Para usar la aplicacion se debe hacer desde linea de comando. Primero se debe compilar\* el codigo fuente, para esto se debe hacer desde la linea de comando usando el siguiente comando:
+
+```
+g++ image-filter.cpp -o image-filter -lpthread `pkg-config --cflags --libs opencv4`
+```
+
+\*Nota: Para compilar el codigo fuente es necesario tene instalado el paquete `pkg-config` ademas de las librerias de opencv.
+
+Luego se ejecuta la aplicación usando el siguiente formato:
 
 ```
 ./image-filter <path_imagen_entrada> <path_imagen_salida> <numero_filtro> <numero_hilos>
@@ -25,14 +33,6 @@ Para usar la aplicacion se debe hacer desde linea de comando usando el siguiente
 De lo anterior se debe tener en cuenta que el numero de hilos debe ser un numero entero mayor que 0, ademas,
 el numero de filtro debe ser un numero entero entre 1 y 12 correspondiente a un filtro de convolución de la
 lista de filtros disponibles.
-
-Ademas si se desea compilar\* el codigo funte se debe hacer desde la linea de comando usando el siguiente comando:
-
-```
-g++ image-filter.cpp -o image-filter -lpthread `pkg-config --cflags --libs opencv4`
-```
-
-\*Nota: Para compilar el codigo fuente es necesario tene instalado el paquete `pkg-config` ademas de las librerias de opencv.
 
 Si se desea ejecutar los ejemplos se tiene disponible el archivo `run_examples.sh` que contiene los comandos necesarios para ejecutar los ejemplos, este script recibe como parametro el numero de hilos a utilizar y el archivo donde se almacenan los tiempos de ejecucion. Para ejecutar el script se debe hacer desde la linea de comando usando el siguiente comando:
 
