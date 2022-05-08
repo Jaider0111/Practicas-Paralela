@@ -63,12 +63,10 @@ int filtro(string image_i, string image_o)
             }
         }
 
-    }
-    //APLICACIÓN DEL FILTRO
-    #pragma omp parallel num_threads(hilos)
-    {
+#pragma omp barrier
+        // //APLICACIÓN DEL FILTRO
         // Se accede al id del hilo
-        int id = omp_get_thread_num();
+        //int id = omp_get_thread_num();
 
         // Se accede a las filas de la matriz con la imagen
         for (int i = id; i < img.rows; i += hilos)

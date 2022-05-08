@@ -22,12 +22,24 @@ Para usar la aplicacion se debe hacer desde linea de comando. Primero se debe co
 g++ image-filter.cpp -o image-filter -lpthread `pkg-config --cflags --libs opencv4`
 ```
 
+Esto para el caso de usar la libreria pthread, si se desea usar OpenMP, se usa:
+
+```
+g++ image-filter-omp.cpp -o image-filter-omp -fopenmp `pkg-config --cflags --libs opencv4`
+```
+
 \*Nota: Para compilar el codigo fuente es necesario tene instalado el paquete `pkg-config` ademas de las librerias de opencv.
 
 Luego se ejecuta la aplicación usando el siguiente formato:
 
 ```
 ./image-filter <path_imagen_entrada> <path_imagen_salida> <numero_filtro> <numero_hilos>
+```
+
+O en el caso ded usar OpenMP:
+
+```
+./image-filter-omp <path_imagen_entrada> <path_imagen_salida> <numero_filtro> <numero_hilos>
 ```
 
 De lo anterior se debe tener en cuenta que el numero de hilos debe ser un numero entero mayor que 0, ademas,
@@ -40,10 +52,22 @@ Si se desea ejecutar para 1, 2, 4, 8 y 16 hiloscon las imagenes ejemplo y el fil
 ./run_all.sh <archivo_salida>
 ```
 
+O en el caso ded usar OpenMP:
+
+```
+./run_all_omp.sh <archivo_salida>
+```
+
 Si se desea ejecutar los ejemplos se tiene disponible el archivo `run_examples.sh` que contiene los comandos necesarios para ejecutar los ejemplos, este script recibe como parametro el numero de hilos a utilizar y el archivo donde se almacenan los tiempos de ejecucion. Para ejecutar el script se debe hacer desde la linea de comando usando el siguiente comando:
 
 ```
 ./run_examples.sh <numero_hilos> <archivo_salida>
+```
+
+O en el caso ded usar OpenMP:
+
+```
+./run_examples_omp.sh <numero_hilos> <archivo_salida>
 ```
 
 \*Nota: Es importante que para ejecutar cualquiera de los comandos disponibles en este documento se debe estar
