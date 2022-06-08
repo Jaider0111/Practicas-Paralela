@@ -3,7 +3,8 @@
 #include <stdlib.h>
 #include <iostream>
 #include "matrices.hpp"
-#include "matrices2.hpp"
+#include "matrices1000.hpp"
+#include "matrices2000.hpp"
 ;
 typedef unsigned char byte;
 
@@ -15,7 +16,7 @@ int matriz_a;
 int matriz_b;
 
 //Se inicializa el tamaño de las matrices
-const int n = 1000;
+const int n = 2000;
 
 //Se declara la matriz resultante
 int resultado[n][n];
@@ -69,7 +70,7 @@ int matrix_mult(){
                 for(int k = 0; k < n; k++){
 
                     //Se realiza la sumatoria de la multiplicación de los elementos de las matrices
-                    resultado[i][j] +=  matrices2[matriz_a][i][k] * matrices2[matriz_b][k][j];
+                    resultado[i][j] +=  matrices2000[matriz_a][i][k] * matrices2000[matriz_b][k][j];
                 }
                 
             }
