@@ -82,9 +82,10 @@ int matrix_mult()
     }
     auto end = chrono::high_resolution_clock::now();
 
-    auto int_s = chrono::duration_cast<chrono::milliseconds>(end - start);
+    auto int_s = chrono::duration_cast<chrono::microseconds>(end - start);
 
-    cout << "MatrixMult elapsed time is " << int_s.count() << " miliseconds " << endl;
+    // cerr << "MatrixMult elapsed time is " << int_s.count() / (float)1e6 << " seconds " << endl;
+    cerr << int_s.count() / (float)1e6 << endl;
     result_mult_matrix();
     free(resultado);
     free(matriz_a);
