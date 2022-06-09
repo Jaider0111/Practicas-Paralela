@@ -16,6 +16,8 @@ int n;
 // Se declara la matriz resultante
 int *resultado;
 
+
+//Se leen las matrices
 void readMatrixs()
 {
     cin >> n;
@@ -111,5 +113,5 @@ int main(int argc, char *argv[])
     // Se llama a la función paralelizada
     matrix_mult();
     // Compile: g++ matrix-multiplication.cpp -o multiplicacionMatrices -fopenmp
-    // run: ./multiplicacionMatrices {hilos} {matriz A} {matriz b}
+    // run: ./multiplicacionMatrices {hilos}
 }
