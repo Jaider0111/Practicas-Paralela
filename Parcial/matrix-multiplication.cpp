@@ -2,110 +2,113 @@
 #include "omp.h"
 #include <stdlib.h>
 #include <iostream>
-#include "matrices.hpp"
-#include "matrices1000.hpp"
-#include "matrices2000.hpp"
-;
-typedef unsigned char byte;
+#include <chrono>
 
 using namespace std;
 
-
 int hilos;
-int matriz_a;
-int matriz_b;
+int *matriz_a;
+int *matriz_b;
 
-//Se inicializa el tamaño de las matrices
-const int n = 2000;
+// Se declara el tamaño de las matrices
+int n;
 
-//Se declara la matriz resultante
-int resultado[n][n];
+// Se declara la matriz resultante
+int *resultado;
 
-
-//Función para inicializar la matriz resultante en 0
-int init_matrix(){
-    for(int i = 0; i < n; ++i)
-        for( int j = 0; j < n; ++j)
+void readMatrixs()
+{
+    cin >> n;
+    matriz_a = (int *)malloc(n * n * sizeof(int));
+    matriz_b = (int *)malloc(n * n * sizeof(int));
+    for (int i = 0; i < n; ++i)
+    {
+        for (int j = 0; j < n; ++j)
         {
-            resultado[i][j]=0;
+            cin >> matriz_a[i * n + j];
         }
-    return 0;
+    }
+    for (int i = 0; i < n; ++i)
+    {
+        for (int j = 0; j < n; ++j)
+        {
+            cin >> matriz_b[i * n + j];
+        }
+    }
 }
 
-//Función para hacer la mostrar el resultado de la multiplicación de las matrices
-int result_mult_matrix(){
-
+// Función para hacer la mostrar el resultado de la multiplicación de las matrices
+int result_mult_matrix()
+{
     for (int i = 0; i < n; i++)
     {
         for (int j = 0; j < n; j++)
         {
-            std::cout<<resultado[i][j]<<" ";
-            
+            cout << *(resultado + i * n + j) << " ";
         }
-        std::cout<<"\n";
+        cout << "\n";
     }
     return 0;
-
 }
 
-//Función para multiplicar dos matrices nxn 
-int matrix_mult(){
+// Función para multiplicar dos matrices nxn
+int matrix_mult()
+{
+    auto start = chrono::high_resolution_clock::now();
+    resultado = (int *)malloc(n * n * sizeof(int));
+    memset(resultado, 0, n * n * sizeof(int));
 
-    //Se inicia la paralelización 
-    #pragma omp parallel num_threads(hilos)
+// Se inicia la paralelización
+#pragma omp parallel num_threads(hilos)
     {
         // Se accede al id del hilo
         int id = omp_get_thread_num();
 
-        //Se inicializa la matriz resultante
-        init_matrix();
-
-        //Se accede a las filas de las matrices
+        // Se accede a las filas de las matrices
         for (int i = 0; i < n; i++)
         {
-            //Se accede a las columnas de las matrices con saltos de tamaño hilos
-            for (int j = id; j < n; j+=hilos)
+            // Se accede a las columnas de las matrices con saltos de tamaño hilos
+            for (int j = id; j < n; j += hilos)
             {
-                //Se accede a los elementos de la columna para la matriz a y la fila de la matriz b
-                for(int k = 0; k < n; k++){
+                // Se accede a los elementos de la columna para la matriz a y la fila de la matriz b
+                for (int k = 0; k < n; k++)
+                {
 
-                    //Se realiza la sumatoria de la multiplicación de los elementos de las matrices
-                    resultado[i][j] +=  matrices2000[matriz_a][i][k] * matrices2000[matriz_b][k][j];
+                    // Se realiza la sumatoria de la multiplicación de los elementos de las matrices
+                    *(resultado + i * n + j) += matriz_a[i * n + k] * matriz_b[k * n + j];
                 }
-                
             }
         }
-        //result_mult_matrix();
-    } 
-    return 0;
+    }
+    auto end = chrono::high_resolution_clock::now();
 
+    auto int_s = chrono::duration_cast<chrono::milliseconds>(end - start);
+
+    cout << "MatrixMult elapsed time is " << int_s.count() << " miliseconds " << endl;
+    result_mult_matrix();
+    free(resultado);
+    free(matriz_a);
+    free(matriz_b);
+    return 0;
 }
 
 int main(int argc, char *argv[])
 {
-    std::cout<<argc<<endl;
-
-    //Se validan argumentos
-    if (argc != 4)
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+    // Se validan argumentos
+    if (argc != 2)
     {
         return 1;
     }
-    //se obtienen número de hilos
+    // se obtienen número de hilos
     hilos = atoi(argv[1]);
 
-    //Se obtiene la matriz a
-    matriz_a = atoi(argv[2]) - 1;
+    // Se obtienen las matrices
+    readMatrixs();
 
-    //se obtiene la matriz b
-    matriz_b = atoi(argv[3]) - 1;
-
-    //Se llama a la función paralelizada
+    // Se llama a la función paralelizada
     matrix_mult();
-
-
-    //Compile: g++ matrix-multiplication.cpp -o multiplicacionMatrices -fopenmp
-    //run: ./multiplicacionMatrices {hilos} {matriz A} {matriz b}
-
-
-
+    // Compile: g++ matrix-multiplication.cpp -o multiplicacionMatrices -fopenmp
+    // run: ./multiplicacionMatrices {hilos} {matriz A} {matriz b}
 }
