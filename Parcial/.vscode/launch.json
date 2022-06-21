@@ -7,13 +7,11 @@
       "request": "launch",
       "args": [],
       "stopAtEntry": false,
-      "cwd": "/home/jaider/Documentos/UNAL/Computacion Paralela/Practicas-Paralela/Practica1",
-      "environment": [],
-      "program": "/home/jaider/Documentos/UNAL/Computacion Paralela/Practicas-Paralela/Practica1/build/Debug/outDebug",
-      "internalConsoleOptions": "openOnSessionStart",
+      "externalConsole": false,
+      "cwd": "/home/jaider/Documentos/UNAL/Computacion Paralela/Practicas-Paralela/Parcial",
+      "program": "/home/jaider/Documentos/UNAL/Computacion Paralela/Practicas-Paralela/Parcial/build/Debug/outDebug",
       "MIMode": "gdb",
-      "miDebuggerPath": "/usr/bin/gdb",
-      "console": "integratedTerminal",
+      "miDebuggerPath": "gdb",
       "setupCommands": [
         {
           "description": "Enable pretty-printing for gdb",
