@@ -20,9 +20,5 @@
     "**/.*/**",
     "**/.vscode",
     "**/.vscode/**"
-  ],
-  "files.associations": {
-    "*.html": "html",
-    "chrono": "cpp"
-  }
+  ]
 }
