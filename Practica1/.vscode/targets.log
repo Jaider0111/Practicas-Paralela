@@ -7,8 +7,9 @@ make: *** No rule to make target 'all'.  Stop.
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
+ 
 
-# Make data base, printed on Sat Apr 23 22:14:35 2022
+# Make data base, printed on Thu May 12 14:03:15 2022
 
 # Variables
 
@@ -30,9 +31,8 @@ XDG_SESSION_TYPE = x11
 VSCODE_LOG_NATIVE = false
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
-# environment
-IM_CONFIG_PHASE = 1
 # automatic
+ 
 @D = $(patsubst %/,%,$(dir $@))
 # environment
 XAUTHORITY = /run/user/1000/gdm/Xauthority
@@ -42,12 +42,12 @@ GDMSESSION = ubuntu
 XMODIFIERS = @im=ibus
 # makefile
 CURDIR := /media/jaider/DiscoArchivos/UNAL/Computacion Paralela/Practicas/Practica1
-# makefile
-SHELL = /bin/sh
 # environment
-VSCODE_NLS_CONFIG = {"locale":"es","availableLanguages":{"*":"es"},"_languagePackId":"81204e1a79a1a53aa2a74c293087d05a.es","_translationsConfigFile":"/home/jaider/.config/Code/clp/81204e1a79a1a53aa2a74c293087d05a.es/tcf.json","_cacheRoot":"/home/jaider/.config/Code/clp/81204e1a79a1a53aa2a74c293087d05a.es","_resolvedLanguagePackCoreLocation":"/home/jaider/.config/Code/clp/81204e1a79a1a53aa2a74c293087d05a.es/dfd34e8260c270da74b5c2d86d61aee4b6d56977","_corruptedFile":"/home/jaider/.config/Code/clp/81204e1a79a1a53aa2a74c293087d05a.es/corrupted.info","_languagePackSupport":true}
+RBENV_SHELL = bash
 # environment
-JOURNAL_STREAM = 8:51580
+VSCODE_NLS_CONFIG = {"locale":"es","availableLanguages":{"*":"es"},"_languagePackId":"125a9a608456aa5e8a25d0a18c7b1d68.es","_translationsConfigFile":"/home/jaider/.config/Code/clp/125a9a608456aa5e8a25d0a18c7b1d68.es/tcf.json","_cacheRoot":"/home/jaider/.config/Code/clp/125a9a608456aa5e8a25d0a18c7b1d68.es","_resolvedLanguagePackCoreLocation":"/home/jaider/.config/Code/clp/125a9a608456aa5e8a25d0a18c7b1d68.es/da15b6fd3ef856477bf6f4fb29ba1b7af717770d","_corruptedFile":"/home/jaider/.config/Code/clp/125a9a608456aa5e8a25d0a18c7b1d68.es/corrupted.info","_languagePackSupport":true}
+# environment
+JOURNAL_STREAM = 8:56233
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # makefile
@@ -55,7 +55,7 @@ MAKEFILE_LIST :=
 # automatic
 @F = $(notdir $@)
 # environment
-GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/com.alacritty.Alacritty.desktop
+IM_CONFIG_PHASE = 1
 # environment
 DEBUG = WARN
 # environment
@@ -71,27 +71,28 @@ VSCODE_VERBOSE_LOGGING = true
 # environment
 _ = /usr/bin/code
 # environment
-MANAGERPID = 2004
+MANAGERPID = 1710
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
+ 
 VSCODE_CWD = /media/jaider/DiscoArchivos/UNAL/Computacion Paralela/Practicas/Practica1
 # environment
-ALACRITTY_SOCKET = /run/user/1000/Alacritty-:0-36977.sock
+ALACRITTY_SOCKET = /run/user/1000/Alacritty-:0-7406.sock
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
-PATH = /opt/anaconda3/condabin:/home/jaider/.cargo/bin:/home/jaider/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/jaider/.dotnet/tools:/opt/gams/gams36.2_linux_x64_64_sfx:/usr/local/go/bin
+PATH = /home/jaider/.rbenv/plugins/ruby-build/bin:/home/jaider/.rbenv/shims:/home/jaider/.rbenv/bin:/opt/anaconda3/condabin:/home/jaider/.cargo/bin:/home/jaider/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/jaider/.dotnet/tools:/opt/gams/gams36.2_linux_x64_64_sfx:/usr/local/go/bin
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/smartsoft:@/tmp/.ICE-unix/2228,unix/smartsoft:/tmp/.ICE-unix/2228
+SESSION_MANAGER = local/smartsoft:@/tmp/.ICE-unix/2772,unix/smartsoft:/tmp/.ICE-unix/2772
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
-WINDOWID = 75497476
+WINDOWID = 71303172
 # environment
-ALACRITTY_LOG = /tmp/Alacritty-36977.log
+ALACRITTY_LOG = /tmp/Alacritty-7406.log
 # environment
 XDG_MENU_PREFIX = gnome-
 # environment
@@ -99,8 +100,9 @@ VSCODE_LOG_STACK = false
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = f99a96fca4444e1bb8990c8d1da788b2
+INVOCATION_ID = 167c3ca451bd4e1f862473d2096d3673
 # default
+ 
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
 LS_COLORS = 
@@ -109,7 +111,7 @@ XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 36977
+GIO_LAUNCHED_DESKTOP_FILE_PID = 7406
 # automatic
 %F = $(notdir $%)
 # environment
@@ -123,8 +125,9 @@ PWD = /media/jaider/DiscoArchivos/UNAL/Computacion Paralela/Practicas/Practica1
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 2189
+SSH_AGENT_PID = 2363
 # environment
+ 
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
 GTK_MODULES = gail:atk-bridge:appmenu-gtk-module
@@ -137,7 +140,7 @@ LESSCLOSE = /usr/bin/lesspipe %s %s
 # environment
 VSCODE_CLI = 1
 # environment
-VSCODE_CODE_CACHE_PATH = /home/jaider/.config/Code/CachedData/dfd34e8260c270da74b5c2d86d61aee4b6d56977
+VSCODE_CODE_CACHE_PATH = /home/jaider/.config/Code/CachedData/da15b6fd3ef856477bf6f4fb29ba1b7af717770d
 # environment
 LOGNAME = jaider
 # environment
@@ -165,13 +168,14 @@ SHLVL = 1
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-2336e259-db46-4932-a8a9-53027f7bfabe.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-4215e6b6-8736-4c8f-b7fe-8c359b31dfee.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
 USER = jaider
 # makefile
 .DEFAULT_GOAL := 
+ 
 # environment
 XDG_CURRENT_DESKTOP = Unity
 # automatic
@@ -181,7 +185,7 @@ CONDA_SHLVL = 0
 # default
 MAKE_COMMAND := make
 # environment
-OLDPWD = /home/jaider
+OLDPWD = /media/jaider/DiscoArchivos/UNAL/Computacion Paralela
 # default
 .VARIABLES := 
 # automatic
@@ -189,7 +193,7 @@ OLDPWD = /home/jaider
 # environment
 LANGUAGE = es_CO:es
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-7f128d37-1.66.2-main.sock
+VSCODE_IPC_HOOK = /run/user/1000/vscode-7f128d37-1.67.1-main.sock
 # makefile
 MAKEFLAGS = pqrR
 # environment
@@ -197,7 +201,10 @@ MFLAGS = -pqrR
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # automatic
+ 
 +D = $(patsubst %/,%,$(dir $+))
+# makefile
+SHELL = /bin/sh
 # environment
 GDK_BACKEND = x11
 # automatic
@@ -214,8 +221,6 @@ MAKEFILES :=
 LC_ALL = C
 # environment
 CONDA_PYTHON_EXE = /opt/anaconda3/bin/python
-# environment
-GJS_DEBUG_TOPICS = JS ERROR;JS LOG
 # automatic
 ^F = $(notdir $^)
 # default
@@ -225,11 +230,10 @@ _CE_M =
 # environment
 CHROME_DESKTOP = code-url-handler.desktop
 # environment
+ 
 WINDOWPATH = 2
 # default
 .INCLUDE_DIRS = /usr/include /usr/include
-# environment
-GJS_DEBUG_OUTPUT = stderr
 # default
 .RECIPEPREFIX := 
 # environment
@@ -237,11 +241,11 @@ LANG = C
 # environment
 TERM = alacritty
 # environment
-VSCODE_PID = 37233
+VSCODE_PID = 10656
 # environment
 _CE_CONDA = 
 # variable set hash-table stats:
-# Load=114/1024=11%, Rehash=0, Collisions=16/134=12%
+# Load=112/1024=11%, Rehash=0, Collisions=16/132=12%
 
 # Pattern-specific Variable Values
 
@@ -249,9 +253,10 @@ _CE_CONDA =
 
 # Directories
 
-# . (device 2053, inode 218522): 15 files, no impossibilities.
+ 
+# . (device 2053, inode 218522): 22 files, no impossibilities.
 
-# 15 files, no impossibilities in 1 directories.
+# 22 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -272,6 +277,7 @@ Makefile:
 #  File does not exist.
 #  File has been updated.
 #  Failed to be updated.
+ 
 
 # Not a target:
 makefile:
@@ -279,7 +285,6 @@ makefile:
 #  File does not exist.
 #  File has been updated.
 #  Failed to be updated.
- 
 
 # Not a target:
 .DEFAULT:
@@ -297,17 +302,18 @@ GNUmakefile:
 # files hash-table stats:
 # Load=6/1024=1%, Rehash=0, Collisions=0/15=0%
 # VPATH Search Paths
+ 
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 22 / storage = 225 B / avg = 10 B
-# current buf: size = 8162 B / used = 225 B / count = 22 / avg = 10 B
+# strcache buffers: 1 (0) / strings = 29 / storage = 352 B / avg = 12 B
+# current buf: size = 8162 B / used = 352 B / count = 29 / avg = 12 B
 
-# strcache performance: lookups = 25 / hit rate = 12%
+# strcache performance: lookups = 32 / hit rate = 9%
 # hash-table stats:
-# Load=22/8192=0%, Rehash=0, Collisions=1/25=4%
-# Finished Make data base on Sat Apr 23 22:14:35 2022
+# Load=29/8192=0%, Rehash=0, Collisions=1/32=3%
+# Finished Make data base on Thu May 12 14:03:15 2022
 
  
