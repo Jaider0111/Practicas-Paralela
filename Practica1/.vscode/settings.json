@@ -34,5 +34,6 @@
     "thread": "cpp",
     "iostream": "cpp",
     "cmath": "cpp"
-  }
+  },
+  "C_Cpp_Runner.useMsvc": false
 }
