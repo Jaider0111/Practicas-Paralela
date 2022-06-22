@@ -60,7 +60,10 @@ int main(int argc, char *argv[])
     imgRows = img.rows;
     imgCols = img.cols;
     original = img.data;
-    solution = (uchar *)malloc(imgRows * imgCols * 3 * sizeof(uchar));
+    if (iam == root)
+    {
+        solution = (uchar *)malloc(imgRows * imgCols * 3 * sizeof(uchar));
+    }
     int processRows = iam < imgRows % tasks ? ceil(imgRows / tasks) : floor(imgRows / tasks);
     solutionPros = (uchar *)malloc(processRows * imgCols * 3 * sizeof(uchar));
 
@@ -68,8 +71,11 @@ int main(int argc, char *argv[])
     int ri;
 
     int lim = imgRows % tasks == 0 ? tasks : imgRows % tasks;
+    int aux = iam < lim ? iam * processRows - 1 : lim * (processRows + 1) - 1 + (iam - lim) * processRows;
+    aux = iam == root ? 0 : aux;
+    cout << iam << ' ' << aux << '\n';
     // Se accede a las filas de la matriz con la imagen
-    for (int i = 0; i <= processRows; i++)
+    for (int i = 0; i < processRows; i++)
     {
         if (iam == root && i == processRows)
         {
@@ -95,8 +101,6 @@ int main(int argc, char *argv[])
                     // Se accede  a las columnas del canal
                     for (int p = 0; p < 3; p++)
                     {
-                        int aux = iam < lim ? iam * processRows - 1 : lim * (processRows + 1) - 1 + (iam - lim) * processRows;
-                        aux = iam == root ? 0 : aux;
                         // Se ejecuta operación del filtro
                         int nx = aux + ri + (d - 1);
                         int ny = j + (p - 1);
