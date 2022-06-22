@@ -34,12 +34,12 @@ int main(int argc, char *argv[])
 
     // PROCESAMIENTO DE LA IMAGEN
     MPI_Init(&argc, &argv);
+    auto start = chrono::high_resolution_clock::now();
     // Se obtiene la cantidad de procesos
     MPI_Comm_size(MPI_COMM_WORLD, &tasks);
     // Se accede al id del proceso
     MPI_Comm_rank(MPI_COMM_WORLD, &iam);
     // Suma de los elementos de la matriz filtro
-    auto start = chrono::high_resolution_clock::now();
     c = 0;
     for (int d = 0; d < 3; d++)
     {

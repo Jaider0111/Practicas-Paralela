@@ -25,7 +25,6 @@ int main(int argc, char *argv[])
     {
         return 1;
     }
-    auto start = chrono::high_resolution_clock::now();
     int i, tag = 1, tasks, iam, c, imgRows, imgCols, root = 0;
     MPI_Status status;
     MPI_Request req[MAX_PROCESS];
@@ -35,6 +34,7 @@ int main(int argc, char *argv[])
 
     // PROCESAMIENTO DE LA IMAGEN
     MPI_Init(&argc, &argv);
+    auto start = chrono::high_resolution_clock::now();
     // Se obtiene la cantidad de procesos
     MPI_Comm_size(MPI_COMM_WORLD, &tasks);
     // Se accede al id del proceso
