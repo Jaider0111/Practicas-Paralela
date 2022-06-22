@@ -25,7 +25,6 @@ int main(int argc, char *argv[])
     {
         return 1;
     }
-    auto start = chrono::high_resolution_clock::now();
     int i, tag = 1, tasks, iam, c, imgRows, imgCols, root = 0;
     MPI_Status status;
     MPI_Request req[MAX_PROCESS];
@@ -40,6 +39,7 @@ int main(int argc, char *argv[])
     // Se accede al id del proceso
     MPI_Comm_rank(MPI_COMM_WORLD, &iam);
     // Suma de los elementos de la matriz filtro
+    auto start = chrono::high_resolution_clock::now();
     c = 0;
     for (int d = 0; d < 3; d++)
     {
