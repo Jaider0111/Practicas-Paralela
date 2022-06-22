@@ -77,7 +77,7 @@ int main(int argc, char *argv[])
     // Se accede a las filas de la matriz con la imagen
     for (int i = 0; i < processRows; i++)
     {
-        if (iam == root && i == processRows)
+        if (iam == root && i == processRows-1)
         {
             ri = imgRows - 1;
         }
@@ -127,7 +127,7 @@ int main(int argc, char *argv[])
             }
         }
     }
-    if (iam == 0)
+    if (iam == root)
     {
         int lim = imgRows % tasks == 0 ? tasks : imgRows % tasks;
         for (int i = 1; i < lim; i++)
