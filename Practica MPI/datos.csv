@@ -1,9 +1,9 @@
-0.515384
-0.427047
-0.43256
-0.427974
-0.456215
-0.375936
+0.478955
+0.444086
+0.503054
+0.456165
+0.438092
+0.491802
 --------------------------------------------------------------------------
 There are not enough slots available in the system to satisfy the 4
 slots that were requested by the application:
@@ -265,12 +265,12 @@ Alternatively, you can use the --oversubscribe option to ignore the
 number of available slots when deciding the number of processes to
 launch.
 --------------------------------------------------------------------------
-1.12666
-0.813247
-0.825723
-0.663438
-0.669678
-0.679459
+0.791089
+0.814896
+0.901368
+0.856825
+0.70835
+0.717384
 --------------------------------------------------------------------------
 There are not enough slots available in the system to satisfy the 4
 slots that were requested by the application:
@@ -532,12 +532,12 @@ Alternatively, you can use the --oversubscribe option to ignore the
 number of available slots when deciding the number of processes to
 launch.
 --------------------------------------------------------------------------
-3.58725
-3.70907
-3.68109
-2.26694
-2.32852
-2.23368
+3.90326
+4.17909
+3.98134
+2.25681
+2.34895
+2.24249
 --------------------------------------------------------------------------
 There are not enough slots available in the system to satisfy the 4
 slots that were requested by the application:

@@ -2,7 +2,8 @@ import os
 
 images = ["perrito720", "perrito1080", "perrito4K"]
 
-os.system("mpic++ image-filter-mpi.cpp -o image-filter-mpi `pkg-config --cflags --libs opencv4`")
+os.system("mpic++ image-filter-mpi.cpp -o image-filter-mpi `pkg-config --cflags --libs opencv4` 2> datos.csv")
+
 
 for img in images:
     for k in range(0, 5):
