@@ -3,6 +3,7 @@
 #include <opencv2/imgcodecs.hpp>
 #include <opencv2/highgui.hpp>
 #include <mpi.h>
+#include <chrono>
 
 typedef unsigned char byte;
 
@@ -22,6 +23,7 @@ int main(int argc, char *argv[])
     {
         return 1;
     }
+    auto start = chrono::high_resolution_clock::now();
     int i, tag = 1, tasks, iam, c, imgRows, imgCols, root = 0;
     MPI_Status status;
     uchar *solutionPros, *originalPros, *solution, *original;
@@ -162,10 +164,15 @@ int main(int argc, char *argv[])
 
     if (iam == root)
     {
-        string image_o = samples::findFile(argv[2]);
         img = Mat(imgRows, imgCols, CV_8UC3, solution);
-        imwrite(image_o, img);
+        imwrite(argv[2], img);
         free(solution);
+        auto end = chrono::high_resolution_clock::now();
+
+        auto int_s = chrono::duration_cast<chrono::microseconds>(end - start);
+
+        // cerr << "MatrixMult elapsed time is " << int_s.count() / (float)1e6 << " seconds " << endl;
+        cerr << int_s.count() / (float)1e6 << endl;
     }
     free(originalPros);
     free(solutionPros);
