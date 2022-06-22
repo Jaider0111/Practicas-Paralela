@@ -32,12 +32,8 @@ int main(int argc, char *argv[])
     // Se lee la imagen
     Mat img;
 
-    auto startI = chrono::high_resolution_clock::now();
     // PROCESAMIENTO DE LA IMAGEN
     MPI_Init(&argc, &argv);
-    auto endI = chrono::high_resolution_clock::now();
-    auto int_sI = chrono::duration_cast<chrono::microseconds>(endI - startI);
-    cout << int_sI.count() / (float)1e6 << endl;
 
     auto start = chrono::high_resolution_clock::now();
     // Se obtiene la cantidad de procesos
@@ -78,7 +74,6 @@ int main(int argc, char *argv[])
     int lim = imgRows % tasks == 0 ? tasks : imgRows % tasks;
     int aux = iam < lim ? iam * processRows - 1 : lim * (processRows + 1) - 1 + (iam - lim) * processRows;
     aux = iam == root ? 0 : aux;
-    cout << iam << ' ' << aux << '\n';
     // Se accede a las filas de la matriz con la imagen
     for (int i = 0; i < processRows; i++)
     {
