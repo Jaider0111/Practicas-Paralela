@@ -5,6 +5,8 @@
 #include <mpi.h>
 #include <chrono>
 
+#define MAX_PROCESS 32
+
 typedef unsigned char byte;
 
 using namespace cv;
@@ -26,6 +28,7 @@ int main(int argc, char *argv[])
     auto start = chrono::high_resolution_clock::now();
     int i, tag = 1, tasks, iam, c, imgRows, imgCols, root = 0;
     MPI_Status status;
+    MPI_Request req[MAX_PROCESS];
     uchar *solutionPros, *originalPros, *solution, *original;
     // Se lee la imagen
     Mat img;
@@ -71,12 +74,12 @@ int main(int argc, char *argv[])
         int lim = imgRows % tasks == 0 ? tasks : imgRows % tasks;
         for (int i = 1; i < lim; i++)
         {
-            MPI_Send(original + (i * processRows - 2) * imgCols * 3, (processRows + 2) * imgCols * 3, MPI_UNSIGNED_CHAR, i, tag, MPI_COMM_WORLD);
+            MPI_Isend(original + (i * processRows - 2) * imgCols * 3, (processRows + 2) * imgCols * 3, MPI_UNSIGNED_CHAR, i, tag, MPI_COMM_WORLD, req + i);
         }
         for (int i = lim; i < tasks; i++)
         {
             int aux = lim * processRows - 2 + (i - lim) * (processRows - 1);
-            MPI_Send(original + aux * imgCols * 3, (processRows + 1) * imgCols * 3, MPI_UNSIGNED_CHAR, i, tag, MPI_COMM_WORLD);
+            MPI_Isend(original + aux * imgCols * 3, (processRows + 1) * imgCols * 3, MPI_UNSIGNED_CHAR, i, tag, MPI_COMM_WORLD, req + i);
         }
     }
     else
